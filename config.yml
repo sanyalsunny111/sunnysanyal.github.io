@@ -1,115 +1,100 @@
-title: PaperModX Example Site
-baseURL: "https://reorx.github.io/papermodx-example/"
+baseURL: "https://sunnysanyal.github.io/"
+title: "Sunny's Research Blog"
+paginate: 10
 theme: PaperModX
 
 enableRobotsTXT: true
-enableEmoji: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
 
 params:
-  description: "PaperModX Example Site description"
-  author: Reorx
-  images:
-    - cover.png
-  favicon: favicon.ico
-  #logo:
-  #  icon: images/logo.svg
-  DateFormat: "2006-01-02"
-  useCustomAnalytics: true
-  mainSections:
-    - posts
-    - notes
-
-  # theme params
-  DisableLanguageSwitch: true
-  TocOpen: true
-  TocSide: right
-  EnableInstantClick: false
-  EnableImageZoom: true
-  ShowShareButtons: true
-  ShareButtons:
-    - twitter
-    - telegram
+  env: production
+  title: "Sunny's Research Blog"
+  description: "Documenting my learning notes"
+  author: "Sunny Sanyal"
+  keywords: [Blog, Machine Learning, AI, Deep Learning]
+  
+  defaultTheme: auto
+  disableThemeToggle: false
+  
   ShowReadingTime: true
-  ShowWordCount: true
-  ShowCodeCopyButtons: true
+  ShowShareButtons: false
   ShowPostNavLinks: true
-  Email: hello@example.com
-
-  socialIcons:
-    - name: github-simple
-      url: "https://github.com/reorx"
-    - name: twitter-simple
-      url: "https://twitter.com/novoreorx"
-    - name: telegram-simple
-      url: "https://t.me/reorx_share"
-    - name: rss-simple
-      url: "feed.xml"
-    - name: gmail
-      url: email
-
-  socialAccounts:
-    twitter:
-      username: novoreorx
-
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+  
+  # Home page info (like Lilian's)
   homeInfoParams:
-    Title: "PaperModX"
-    Content: |
-      Welcome to demo of hugo's theme PaperModX.
+    Title: "👋 Welcome to Sunny's Blog"
+    Content: "Hi, this is Sunny. I'm documenting my learning notes in this blog."
+  
+  # Social icons (shown on homepage)
+  socialIcons:
+    - name: x
+      url: "https://x.com/SunnySanyal9"
+    - name: website
+      url: "https://sites.google.com/view/sunnysanyal/home"
+    - name: github
+      url: "https://github.com/sanyalsunny111"  # ← Add your GitHub if you want
+    - name: googlescholar
+      url: "https://scholar.google.co.uk/citations?user=xx9rrGMAAAAJ&hl=en&oi=ao"  # ← Optional: add if you have
+  
+  # Cover image settings
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
 
-      - **PaperModX** is a simple but fast and responsive theme with useful feature-set that enhances UX.
+  # For blog post SEO
+  assets:
+    disableHLJS: false
+    disableFingerprinting: false
 
-      - PaperModX is based on theme [PaperMod](https://github.com/adityatelange/hugo-PaperMod).
-
-      To get started, please head to the [Docs](docs).
-
-      To see examples of different contents, head to [examples tag](tags/example).
-
-  #commentSystems:
-  #  disqus:
-  #    shortname: reorx
-  #  remark42:
-  #    url: https://remark42.reorx.com
-  #    site: reorx.github.io
-  #  telegramWidget:
-  #    channel: reorx_share
-  #    accentColor: "9077e1"
-  #    limit: 20
-  #defaultCommentSystems:
-  #  remark42: true
-
-permalinks:
-  notes: /:section/:year/:month/:slugorfilename
-
-# prefer feed.xml rather than index.xml
-outputFormats:
-  RSS:
-    mediatype: "application/rss"
-    baseName: "feed"
-
+# Top menu (like Lilian has Posts, FAQ, Archives, Search)
 menu:
   main:
-    - name: Posts
+    - identifier: posts
+      name: Posts
       url: /posts/
-      weight: 1
-    - name: Notes
-      url: /notes/
-      weight: 2
-    - name: Newsletter
-      url: /newsletter/
-      weight: 3
-    - name: Archives
+      weight: 10
+    - identifier: archives
+      name: Archives
       url: /archives/
-      weight: 4
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 30
 
-languages:
-  en:
-    languageName: "English"
+# For search functionality
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
 
+# Syntax highlighting for code blocks
 markup:
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    style: monokai
   goldmark:
     renderer:
-      unsafe: true
-  highlight:
-    style: dracula
-    lineNos: false
-    noClasses: false
+      unsafe: true  # Allows HTML in markdown (useful for math)
