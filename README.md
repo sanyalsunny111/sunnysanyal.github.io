@@ -1,14 +1,7 @@
-# hugo-PaperModX Example
+# Sunny Sanyal Research Blog
 
-This repository offers an example site for [hugo-PaperModX](https://github.com/reorx/hugo-PaperModX)
+🔗 **Live site:** https://sanyalsunny111.github.io/
 
-The GitHub Pages site for this repo is at: https://reorx.github.io/papermodx-example/
+This is my personal research blog where I write about language models, efficient training, and exploratory ideas —  
+from fully **novel** posts 🟥 to **not-so-novel** explorations 🟦.
 
-## How to use
-
-1. Fork this repo
-2. Go to "Settings > Pages", select "GitHub Actions" for the "Source" dropdown
-
-    ![](_readme_images/settings-pages.png)
-3. Go to "Actions", rerun the failed workflow
-4. Your site should be available at `https://$USERNAME.github.io/papermodx-example/`, you can also check the URL at `https://github.com/$USERNAME/papermodx-example/settings/pages`
