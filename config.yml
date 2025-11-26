@@ -1,12 +1,12 @@
 baseURL: "https://sanyalsunny111.github.io/"
-title: "Sunny's Research Blog"
+title: "Sunny Sanyal Research Blog"
 theme: PaperModX
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-# Fixed: Changed from 'paginate' to 'pagination.pagerSize'
+# Pagination
 pagination:
   pagerSize: 10
 
@@ -16,14 +16,14 @@ minify:
 
 params:
   env: production
-  title: "Sunny's Research Blog"
-  description: "Documenting my learning notes"
+  title: "Sunny Sanyal Research Blog"
+  description: "Research blogs on deep learning and AI"
   author: "Sunny Sanyal"
   keywords: [Blog, Machine Learning, AI, Deep Learning]
-  
+
   defaultTheme: auto
   disableThemeToggle: false
-  
+
   ShowReadingTime: true
   ShowShareButtons: false
   ShowPostNavLinks: true
@@ -39,29 +39,37 @@ params:
   hideSummary: false
   showtoc: true
   tocopen: false
-  
-  # Home page info
+
+  # Home box on landing page
   homeInfoParams:
-    Title: "👋 Welcome to Sunny's Blog"
-    Content: "Hi, this is Sunny. I'm documenting my learning notes in this blog."
-  
+    Title: "👋 Hello"
+    Content: >
+      Hi, I'm Sunny Sanyal. I study and think about language models.
+      This blog spans a range of ideas —
+      🟥 marks posts that are **novel**,
+      🟦 marks those that are **not-so-novel**.
+
   # Social icons
   socialIcons:
-    - name: x
+    - name: twitter
       url: "https://x.com/SunnySanyal9"
-    - name: website
+    - name: home
       url: "https://sites.google.com/view/sunnysanyal/home"
     - name: github
       url: "https://github.com/sanyalsunny111"
     - name: googlescholar
       url: "https://scholar.google.co.uk/citations?user=xx9rrGMAAAAJ&hl=en&oi=ao"
-  
+
+  # Only show posts on the homepage (hides newsletter from home list)
+  mainSections:
+    - posts
+
   # Cover image settings
   cover:
     hidden: false
     hiddenInList: false
     hiddenInSingle: false
-    
+
   # Assets settings
   assets:
     disableHLJS: false
