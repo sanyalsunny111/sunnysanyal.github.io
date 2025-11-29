@@ -45,9 +45,6 @@ params:
     Title: "👋 Hello"
     Content: >
       Hi, I'm Sunny Sanyal. I study and think about language models.
-      This blog spans a range of ideas —
-      🟥 marks posts that are **novel**,
-      🟦 marks those that are **not-so-novel**.
 
   # Social icons
   socialIcons:

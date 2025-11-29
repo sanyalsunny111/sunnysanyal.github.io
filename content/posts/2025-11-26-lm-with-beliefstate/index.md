@@ -1,13 +1,12 @@
 ---
-title: "Language Models with Belief State"
+title: "Language Models with Belief State Generalizes Much Better during Pre-training"
 date: 2025-11-26
+author: "Sunny Sanyal"
+editor: "Dr. Mike Mozer"
 summary: "A small proof-of-concept study on integrating differentiable belief states into GPT-style decoders."
 tags:
   - language models
   - belief state
-  - pondering
-  - recurrent inference
-  - efficient training
 draft: false
 ---
 
